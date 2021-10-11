@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "640046256328",
+    "project_id": "hitchhike-e6e76",
+    "storage_bucket": "hitchhike-e6e76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640046256328:android:318646f8f83cdee3e9d5fd",
+        "android_client_info": {
+          "package_name": "com.example.hitch_hike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640046256328-76gl2ri09frd1mrvsvlqlfcudr5k4jco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hitch_hike",
+            "certificate_hash": "e8a52a8b7e987936389506dab924e5e45fb21f23"
+          }
+        },
+        {
+          "client_id": "640046256328-cl0c3ioob7qiaasqatm7e0egj05rbvb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO64NwnGCo60WZoJ8Fj1rmhMOiaRh3mcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640046256328-cl0c3ioob7qiaasqatm7e0egj05rbvb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
