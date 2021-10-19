@@ -6,7 +6,7 @@ import 'package:hitch_hike/utils/g_authentication.dart';
 import 'g_sign_in_screen.dart';
 
 class GUserInfoScreen extends StatefulWidget {
-  const GUserInfoScreen({Key? key, required User user})
+  const GUserInfoScreen({Key key, User user})
       : _user = user,
         super(key: key);
 
@@ -17,7 +17,7 @@ class GUserInfoScreen extends StatefulWidget {
 }
 
 class _GUserInfoScreenState extends State<GUserInfoScreen> {
-  late User _user;
+  User _user;
   bool _isSigningOut = false;
 
   Route _routeToSignInScreen() {
@@ -73,7 +73,7 @@ class _GUserInfoScreenState extends State<GUserInfoScreen> {
                       child: Material(
                         color: Palette.firebaseGrey.withOpacity(0.3),
                         child: Image.network(
-                          _user.photoURL!,
+                          _user.photoURL,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -101,7 +101,7 @@ class _GUserInfoScreenState extends State<GUserInfoScreen> {
               ),
               SizedBox(height: 8.0),
               Text(
-                _user.displayName!,
+                _user.displayName,
                 style: TextStyle(
                   color: Palette.firebaseYellow,
                   fontSize: 26,
@@ -109,7 +109,7 @@ class _GUserInfoScreenState extends State<GUserInfoScreen> {
               ),
               SizedBox(height: 8.0),
               Text(
-                '( ${_user.email!} )',
+                '( ${_user.email} )',
                 style: TextStyle(
                   color: Palette.firebaseOrange,
                   fontSize: 20,

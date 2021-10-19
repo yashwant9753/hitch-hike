@@ -1,6 +1,9 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
+import 'package:hitch_hike/blocks/application_block.dart';
 
 import 'package:hitch_hike/screens/authentication/google_sign_in/g_sign_in_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,17 +12,20 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hitch Hike ',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        brightness: Brightness.dark,
-        fontFamily: 'OpenSans',
+    return ChangeNotifierProvider(
+      create: (context) => ApplicationBloc(),
+      child: MaterialApp(
+        title: 'Hitch Hike ',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.indigo,
+          brightness: Brightness.dark,
+          fontFamily: 'OpenSans',
+        ),
+        // home: SignInScreen(),
+        home: GSignInScreen(),
+        // HomeScreen(),
       ),
-      // home: SignInScreen(),
-      home: GSignInScreen(),
-      // HomeScreen(),
     );
   }
 }

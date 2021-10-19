@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:hitch_hike/res/fire_assets.dart';
 import 'package:hitch_hike/screens/authentication/google_sign_in/g_user_info_screen.dart';
 import 'package:hitch_hike/utils/g_authentication.dart';
+import 'package:hitch_hike/screens/user_form.dart';
+import 'package:hitch_hike/screens/home_screen.dart';
+import 'package:hitch_hike/screens/user_form.dart';
 
 class GoogleSignInButton extends StatefulWidget {
   @override
@@ -33,7 +36,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 setState(() {
                   _isSigningIn = true;
                 });
-                User? user =
+                User user =
                     await GAuthentication.signInWithGoogle(context: context);
 
                 setState(() {
@@ -43,10 +46,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 if (user != null) {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => GUserInfoScreen(
-                        user: user,
-                      ),
-                    ),
+                        builder: (context) => HomePage(user: user)),
                   );
                 }
               },
